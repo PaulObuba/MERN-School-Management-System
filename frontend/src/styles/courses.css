@@ -1,0 +1,177 @@
+.hero-section {
+  height: 80vh;
+  padding-top: 5rem;
+}
+
+.hero-content {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: 100%;
+}
+
+.sec-2 {
+  padding: 5rem 7rem;
+}
+
+
+/* COUNTER SECTION STARTS */
+
+.counter-section {
+  background-image: linear-gradient(
+     228deg,
+     rgba(0, 166, 255, 0.55),
+     hsla(240, 100%, 20%, 0.8)
+   ),
+   url("../assets/images/login-bg.jpg");
+ background-position: center;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ padding: 5rem 9rem;
+ opacity: 0.9;
+}
+
+.counter-section .card-div {
+ display: grid;
+ grid-template-columns: 0.5fr 0.5fr 0.5fr;
+ justify-content: space-around;
+ align-items: center;
+ gap: 0.5rem;
+}
+
+.counter-section .card {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+ border-right: 1px solid var(--light-white);
+ background-color: transparent;
+ padding: 1rem;
+}
+
+.counter-section .card:last-child {
+ border: none;
+}
+
+.counter-section .card i {
+ font-size: 3.5rem;
+ margin-right: 1rem;
+ color: var(--prim-color);
+}
+
+.counter-section .card .number {
+ font-size: 2rem;
+ font-weight: 800;
+ color: white;
+}
+
+.counter-section .card .text {
+ text-align: center;
+ text-transform: uppercase;
+ font-size: 1.2rem;
+ font-weight: 700;
+ color: white;
+}
+/* COUNTER SECTION ENDS */
+
+@media (max-width: 1300px) {
+  .hero-content {
+    padding: 4rem 2rem 0 3rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3.4rem;
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 850px) {
+  .hero-content {
+    padding-top: 10rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    padding: 0;
+  }
+  .hero-content {
+    padding: 8rem 2rem 0 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    line-height: 40px;
+  }
+
+  .hero-content .hero-text2 {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .counter-section .card-div {
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-section {
+    padding: 0;
+  }
+
+  .hero-content {
+    padding: 0 2rem;
+    padding-top: 8rem;
+  }
+
+  .hero-content .hero-text1 {
+    font-size: 0.7rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+    line-height: 40px;
+  }
+
+  .hero-content .hero-text2 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .counter-section .card-div {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .counter-section .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-right: none;
+    border-bottom: 1px solid var(--light-white);
+    padding: 1rem;
+    padding-bottom: 3rem;
+  }
+}

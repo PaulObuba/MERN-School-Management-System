@@ -31,7 +31,7 @@
 
 /* Active navigation link */
 .active__link {
-  color: red;
+  color: var(--prim-color);
 }
 /* Inactive navigation link */
 .null {

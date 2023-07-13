@@ -1,0 +1,33 @@
+.courses-section {
+  padding: 4rem 7rem;
+}
+
+ .course {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  min-height: 24rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+ .course img {
+  width: 100%;
+  height: 14rem;
+  margin-bottom: 1rem;
+}
+
+ .course h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.courses-section .course p {
+  color: var(--text-black-800);
+}
+
+.courses-section button {
+  float: right;
+}
