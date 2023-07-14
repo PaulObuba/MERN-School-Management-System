@@ -63,7 +63,7 @@ const Header = () => {
             <div className='nav__right d-flex align-items-center gap-4'>
               <div className='nav__btns d-flex align-items-center gap-4'>
                 <h5 className='mb-0'> John </h5>
-                <Button className='btn btn-dark'> Logout </Button>
+                <Button className='btn btn-danger'> Logout </Button>
               </div>
 
               <div className='mobile__menu'>

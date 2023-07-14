@@ -1,8 +1,10 @@
 import React from "react";
 import "../styles/home.css";
 
+// COMPONENTS
 import Courses from "../components/courses/Courses.jsx";
 import CourseMate from "../components/courseMate/CourseMate.jsx";
+import CommonSection from "../sheared/common_section/CommonSection";
 
 // SWIPER
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -157,21 +159,8 @@ const Home = () => {
         </SwiperSlide>
       </Swiper>
 
-      {/* <!-- About Section --> */}
-      <section className='about__section'>
-        <h2 className='section__title'>About Us</h2>
-        <p className='text'>
-          We are a public school intrested in any student exploring the field of
-          sicence, technology, engineering and math.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi vel a
-          corrupti temporibus repellendus facere fugiat? Totam consequuntur
-          rerum necessitatibus, eos pariatur corporis voluptates, saepe aliquam
-          maxime accusamus nam voluptatum! Nam provident cupiditate rerum
-          nihil..
-        </p>
-      </section>
+      {/* <!-- SECTION 2 --> */}
+      <CommonSection title={"About Us"} />
 
       {/* <!-- MISSION SECTION  --> */}
       <section className='mission-section'>

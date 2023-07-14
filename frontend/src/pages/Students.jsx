@@ -10,6 +10,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+// COMPONENTS
+import CommonSection from "../sheared/common_section/CommonSection";
+import Counter from "../sheared/counter_section/Counter.jsx";;
+
 const Students = () => {
   return (
     <>
@@ -133,44 +137,10 @@ const Students = () => {
       </Swiper>
 
       {/* <!-- SECTION 2 --> */}
-      <section className='sec-2'>
-        <h2 className='section__title'>Students</h2>
-        <p className='text'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-          architecto dolore dignissimos laudantium obcaecati quam rerum ea
-          recusandae vel in deserunt ipsum, perferendis eaque unde aliquid est
-          atque iusto necessitatibus. Quam esse ad modi perspiciatis fugiat ut
-          similique quidem aut non possimus magni nihil accusantium eius, sequi
-          Sit, optio aperiam!
-        </p>
-      </section>
+      <CommonSection title={'Students'} />
 
-      {/* <!-- Counter Section --> */}
-      <section className='counter-section'>
-        <div className='card-div'>
-          <div className='card'>
-            <i className='fa fa-graduation-cap'></i>
-            <div className='card-content'>
-              <p className='number'>160+</p>
-              <p className='text'>Courses</p>
-            </div>
-          </div>
-          <div className='card'>
-            <i className='fa fa-user'></i>
-            <div>
-              <p className='number'>160+</p>
-              <p className='text'>Students</p>
-            </div>
-          </div>
-          <div className='card'>
-            <i className='fa fa-chalkboard-user'></i>
-            <div>
-              <p className='number'>160+</p>
-              <p className='text'>Teachers</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* <!-- COUNTER SECTION --> */}
+      <Counter />
     </>
   );
 };

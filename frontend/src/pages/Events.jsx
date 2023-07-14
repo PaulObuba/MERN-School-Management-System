@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/events.css';
+import "../styles/events.css";
 import pic2 from "../assets/images/pic-2.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,6 +12,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
+
+import CommonSection from "../sheared/common_section/CommonSection";
+import Counter from "../sheared/counter_section/Counter.jsx";
+
+import eventData from "../assets/data/tours";
+import EventCard from "../sheared/cards/EventCard.jsx";
 
 const Events = () => {
   return (
@@ -131,52 +137,20 @@ const Events = () => {
       </Swiper>
 
       {/* <!-- SECTION 2 --> */}
-      <section className='sec-2'>
-        <h2 className='section__title'>Events</h2>
-        <p className='text'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum unde
-          necessitatibus perspiciatis sed maxime dolor quia eius natus
-          dignissimos. Maiores corporis voluptatum quia dolorem, minus
-          exercitationem aspernatur recusandae sapiente quod! excepturi ulla.
-        </p>
-      </section>
+      <CommonSection title={"Events"} />
 
-      {/* <!-- Counter Section --> */}
-      <section className='counter-section'>
-        <div className='card-div'>
-          <div className='card'>
-            <i className='fa fa-graduation-cap'></i>
-            <div className='card-content'>
-              <p className='number'>160+</p>
-              <p className='text'>Courses</p>
-            </div>
-          </div>
-          <div className='card'>
-            <i className='fa fa-user'></i>
-            <div>
-              <p className='number'>160+</p>
-              <p className='text'>Students</p>
-            </div>
-          </div>
-          <div className='card'>
-            <i className='fa fa-chalkboard-user'></i>
-            <div>
-              <p className='number'>160+</p>
-              <p className='text'>Teachers</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* <!-- COUNTER SECTION --> */}
+      <Counter />
 
       {/* <!-- Previous Evnets --> */}
       <section className='previous-events'>
-        <h2 className='section__title'>Previous Events</h2>
+        <h2 className='section__title'>Upcoming Events</h2>
         <Swiper
           effect={"coverflow"}
           slidesPerView={4}
           spaceBetween={20}
           autoplay={{
-            delay: 1000,
+            delay: 4000,
             disableOnInteraction: false,
           }}
           grabCursor={true}
@@ -201,12 +175,12 @@ const Events = () => {
               slidesPerView: 3,
             },
             1200: {
-              slidesPerView: 4,
+              slidesPerView: 3,
             },
           }}
           className='eventSwiper'
         >
-          <SwiperSlide className='event'>
+          {/* <SwiperSlide className='event'>
             <div className='time'>
               <p className='date'>14</p>
               <p className='date-string'>
@@ -325,7 +299,19 @@ const Events = () => {
               Voluptate, labore. Itaque, modi suscipit. Earum accusamus
               molestiae sequi?
             </p>
-          </SwiperSlide>
+          </SwiperSlide> */}
+
+          {eventData?.map((event) => (
+            <SwiperSlide>
+              <div
+                lg='3'
+                className='d-flex justify-content-between mb-4'
+                key={event.id}
+              >
+                <EventCard event={event} />
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </section>
     </>

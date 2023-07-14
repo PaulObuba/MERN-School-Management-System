@@ -1,15 +1,16 @@
 import React from "react";
 import "./courseMate.css";
 
-// Import Swiper React components
+// SWIPER
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // import required modules
 import { Autoplay, EffectCoverflow } from "swiper/modules";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
+
+import eventData from "../../assets/data/tours";
+import EventCard from "../../sheared/cards/EventCard";
 
 const CourseMate = () => {
   return (
@@ -50,7 +51,7 @@ const CourseMate = () => {
         }}
         className='courseMateSwiper'
       >
-        <SwiperSlide className='course'>
+        {/* <SwiperSlide className='course'>
           <img
             src='https://media.istockphoto.com/id/1351445530/photo/african-student-sitting-in-classNameroom.jpg?s=612x612&w=0&k=20&c=1ICaZ03iFLzDmxfBkfDkmBGSgj1SDEpsM3eSDgB1KBk='
             alt=''
@@ -148,9 +149,22 @@ const CourseMate = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate,
             labore. Itaque, modi suscipit.
           </p>
-        </SwiperSlide>
+        </SwiperSlide> */}
+
+        {eventData?.map((event) => (
+          <SwiperSlide>
+            <div
+              lg='3'
+              className='d-flex justify-content-between mb-4'
+              key={event.id}
+            >
+              <EventCard event={event} />
+            </div>
+          </SwiperSlide>
+        ))}
+
         <button className='btn'>
-          <a href='./students.html'> View more </a>
+          <a href='./students'> View more </a>
         </button>
       </Swiper>
     </section>

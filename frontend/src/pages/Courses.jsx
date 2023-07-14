@@ -1,6 +1,9 @@
 import React from "react";
 import "../styles/courses.css";
 
+// COMPONENTS
+import Counter from "../sheared/counter_section/Counter.jsx";
+
 // SWIPER
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
@@ -8,6 +11,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import CommonSection from "../sheared/common_section/CommonSection";
 
 const Courses = () => {
   return (
@@ -133,42 +137,10 @@ const Courses = () => {
       </Swiper>
 
       {/* <!-- SECTION 2 --> */}
-      <section class='sec-2'>
-        <h2 class='section__title'>Courses</h2>
-        <p class='text'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum unde
-          necessitatibus perspiciatis sed maxime dolor quia eius natus
-          dignissimos. Maiores corporis voluptatum quia dolorem, minus
-          exercitationem aspernatur recusandae sapiente quod! excepturi ulla.
-        </p>
-      </section>
+     <CommonSection title={'Courses'} />
 
-      {/* <!-- Counter Section --> */}
-      <section class='counter-section'>
-        <div class='card-div'>
-          <div class='card'>
-            <i class='fa fa-graduation-cap'></i>
-            <div class='card-content'>
-              <p class='number'>160+</p>
-              <p class='text'>Courses</p>
-            </div>
-          </div>
-          <div class='card'>
-            <i class='fa fa-user'></i>
-            <div>
-              <p class='number'>160+</p>
-              <p class='text'>Students</p>
-            </div>
-          </div>
-          <div class='card'>
-            <i class='fa fa-chalkboard-user'></i>
-            <div>
-              <p class='number'>160+</p>
-              <p class='text'>Teachers</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* <!-- COUNTER SECTION --> */}
+      <Counter />
     </>
   );
 };

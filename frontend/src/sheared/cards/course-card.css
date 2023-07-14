@@ -1,0 +1,40 @@
+
+ .course__card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  min-height: 24rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+ .course__card img {
+  width: 100%;
+  height: 15rem;
+  margin-bottom: 1rem;
+}
+
+ .course__card .course__title a {
+  color: var(text-black-900);
+ }
+ .course__card .course__title a {
+  font-size: 1rem;
+  font-weight: 600;
+
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+
+}
+
+.course__card .course__title:hover a {
+  color: var(--prim-color);
+}
+
+.course__card .course__discription {
+  color: var(--text-black-800);
+}
+
+.course__card .course__btn {
+  float: right;
+}

@@ -1,13 +1,15 @@
 import React from "react";
 import "./courses.css";
 
+// SWIPER
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // import required modules
 import { Autoplay } from "swiper/modules";
-
 // Import Swiper styles
 import "swiper/css";
+
+import courseData from "../../assets/data/tours";
+import CourseCard from "../../sheared/cards/CourseCard"
 
 const Courses = () => {
   return (
@@ -16,7 +18,6 @@ const Courses = () => {
       <Swiper
         slidesPerView={4}
         spaceBetween={30}
-      
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,
@@ -41,7 +42,7 @@ const Courses = () => {
         }}
         className='courseSwiper'
       >
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <div className='course'>
             <img
               src='https://s40424.pcdn.co/in/wp-content/uploads/2022/07/digital-marketing-courses.jpg'
@@ -138,7 +139,7 @@ const Courses = () => {
               molestiae sequi?
             </p>
           </div>
-        </SwiperSlide>
+        </SwiperSlide> 
         <SwiperSlide>
           <div className='course'>
             <img
@@ -152,8 +153,21 @@ const Courses = () => {
               molestiae sequi?
             </p>
           </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
+
+        {courseData?.map((course) => (
+          <SwiperSlide>
+            <div
+              lg='3'
+              className='d-flex justify-content-between mb-4'
+              key={course.id}
+            >
+              <CourseCard course={course} />
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
+
       <button className='btn'>
         <a href='./courses.html'> View more </a>
       </button>

@@ -43,7 +43,7 @@ section {
   cursor: pointer;
 }
 
-.section__title {
+/* .section__title {
   font-size: 1.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -61,7 +61,7 @@ section {
   height: 0.3rem;
   background-color: var(--prim-color);
   border-radius: 50px;
-}
+} */
 
 .shadow {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
