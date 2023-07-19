@@ -31,26 +31,27 @@ export const login = async (req, res) => {
   try {
     const email = req.body.email;
 
-    const user = User.findOne({ email })
+    const user = await User.findOne({ email })
+    console.log(user)
 
     // IF USER DO NOT EXIST
     if (!user) {
-      res.status(404).json({ success: false, message: 'User not found....' });
+      return res.status(404).json({ success: false, message: 'User not found....' });
     }
 
     // IF USER EXIST THEN CHECK OR COMPARE THE PASSWORD
-    const checkPassword = await bcrypt.compare(req.body.password, user.password)
+    const checkPassword = await bcrypt.compare(req.body.password, user.password)  
 
     // IF PASSWORD IS INCORRECT 
     if (!checkPassword) {
-      res.status(404).json({ succes: false, message: 'Incorrect password....' })
+      return res.status(404).json({ succes: false, message: 'Incorrect password....' })
     }
 
     const { password, role, ...rest } = user._doc;
 
     // CREATE JSON WEB TOKEN 
     const token = jwt.sign(
-      { id: user_id, role: user.role },
+      { id: user._id, role: user.role },
       process.env.JWT_SECRET_KEY,
       { expiresIn: '15d' }
     )
@@ -59,7 +60,7 @@ export const login = async (req, res) => {
     res.cookie("accessToken", token, {
       httpOnly: true,
       expires: token.expiresIn
-    }).status().json({ success: true, message: 'Successfully login....', token, data: { ...rest }, role })
+    }).status(200).json({ success: true, message: 'Successfully login....', token, data: { ...rest }, role })
 
   } catch (err) {
     res.status(500).json({ success: false, message: `Failed to login. Try agin.....     ${err}` })

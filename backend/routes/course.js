@@ -1,5 +1,6 @@
 import express from 'express';
 import { createCourse, updateCourse, getSingleCourse, getAllCourse, getCourseBySearch, deleteCourse } from '../controllers/courseController.js';
+// import { verifyUser, verifyAdmin } from '../utils/verifyToken.js';
 
 const router = express.Router();
 

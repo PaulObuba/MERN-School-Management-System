@@ -13,6 +13,7 @@ const corsOptions = {
 }
 
 // ROUTES
+import authRoute from './routes/auth.js';
 import userRoute from './routes/user.js';
 import courseRoute from './routes/course.js';
 import eventRoute from './routes/event.js';
@@ -20,9 +21,12 @@ import studentRoute from './routes/student.js';
 import teacherRoute from './routes/teacher.js';
 import notificationRoute from './routes/notification.js';
 
+
+
 // MIDDLEWARE
 app.use(express.json());
 app.use(cors(corsOptions));
+app.use('/api/v1/auth', authRoute);
 app.use('/api/v1/user', userRoute);
 app.use('/api/v1/course', courseRoute);
 app.use('/api/v1/event', eventRoute);
