@@ -19,7 +19,7 @@ const Courses = () => {
         slidesPerView={4}
         spaceBetween={30}
         autoplay={{
-          delay: 2000,
+          delay: 6000,
           disableOnInteraction: false,
         }}
         grabCursor={true}

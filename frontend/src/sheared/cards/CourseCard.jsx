@@ -13,7 +13,7 @@ const CourseCard = ({ course }) => {
       </div>
       <div className='card__bottom'>
         <i>icon (like )</i>
-        <h3 className='course__title'> <Link to={'/courses'}> {title} </Link> </h3>
+        <h3 className='course__title'> <Link to={`/courses/${id}`}> {title} </Link> </h3>
         <p className='course__discription'>{discription}</p>
         <button className='btn course__btn'> book now </button>
       </div>
